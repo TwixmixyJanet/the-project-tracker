@@ -11,7 +11,7 @@ function displayTime() {
 }
 
 function readProjectsFromStorage() {
-  const projects = localStorage.getItem("projects");
+  let projects = localStorage.getItem("projects");
   if (projects) {
     projects = JSON.parse(projects);
   } else {
@@ -27,11 +27,11 @@ function saveProjectsToStorage(projects) {
 function printProjectData() {
   projectDisplayEl.empty();
 
-  const projects = readProjectsFromStorage();
+  let projects = readProjectsFromStorage();
 
   for (let i = 0; i < projects.length; i += 1) {
-    const project = projects[1];
-    const projectDate = dayjs(project.date);
+    let project = projects[1];
+    let projectDate = dayjs(project.date);
 
     const today = dayjs().startOf("day");
 
