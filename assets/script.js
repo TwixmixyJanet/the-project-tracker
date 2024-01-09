@@ -30,7 +30,7 @@ function printProjectData() {
   let projects = readProjectsFromStorage();
 
   for (let i = 0; i < projects.length; i += 1) {
-    let project = projects[1];
+    let project = projects[i];
     let projectDate = dayjs(project.date);
 
     const today = dayjs().startOf("day");
